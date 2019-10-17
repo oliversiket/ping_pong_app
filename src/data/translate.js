@@ -11,7 +11,12 @@ const translate = {
         p2Name: "Player 2 Name",
         winningScore: "Winning Score",
         altEvery: "Alternate Every",
-        startGame: "Start Game"
+        startGame: "Start Game",
+        displayHistory: "Games History",
+        gameFinished: "Game Finished",
+        yes: "Yes",
+        no: "No",
+        stillPlay: "Still playing..."
     },
     esperanto:{
         player_1: "Ludanto 1",
@@ -25,7 +30,12 @@ const translate = {
         p2Name: "Ludanto 2 Nomo",
         winningScore: "Venkanta Poentaro",
         altEvery: "Alternu Ĉiun",
-        startGame: "Komencu Ludon"
+        startGame: "Komencu Ludon",
+        displayHistory: "Historio de Ludoj",
+        gameFinished: "Ludo Finita",
+        yes: "Jes",
+        no: "Ne",
+        stillPlay: "Daŭre ludante..."
     }
 }
 export default translate

@@ -10,7 +10,7 @@ const initial = {
     winscore: 21,
     winner: 0,
     alternate: 5,
-    gameIsOn: false,
+    display: "settings",
     loaded: false,
     lang: translate["english"],
     games:[

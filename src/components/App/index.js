@@ -5,7 +5,7 @@ import App from "./App"
 const mapStateToProps = ( state ) => {
     
     return {
-        gameIsOn: state.gameIsOn,
+        display: state.display
     };
 
 };

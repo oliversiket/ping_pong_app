@@ -1,22 +1,11 @@
-import Player1 from "../../components/Player/Player1";
-
-export const playerOne = (player) => {
-    return {
-        type: "playerOneScores",
-        player: player
-    };
-};
-
-export const playerTwo = (player) => {
-    return {
-        type: "playerTwoScores",
-        player: player
-    };
-};
-
 export const reset = () => {
     return {
         type: "reset",
+    }; 
+};
+export const displayHist = () => {
+    return {
+        type: "displayHistory",
     }; 
 };
 
@@ -25,32 +14,35 @@ export const language = () => {
         type: "changeLanguage",
     }; 
 }
-export const saveData = ( state ) => {
+export const saveData = ( data ) => {
     return {
         type: "saveData",
-        p1name: state.p1name,
-        p2name: state.p2name,
-        winscore: state.winscore,
-        alternate: state.alt,
-        currentGameId: state.currentGameId,
+        p1name: data.p1name,
+        p2name: data.p2name,
+        winscore: data.winscore,
+        alternate: data.alt,
+        currentGameId: data.currentGameId,
     };
 }
-export const setWinner = ( state ) => {
+export const setWinner = ( data ) => {
     return {
         type: "setWinner",
-        player1: state.player1,
-        player2: state.player2,
-        winner: state.winner,
-        serving: state.serving 
+        player1: data.player1,
+        player2: data.player2,
+        winner: data.winner,
+        serving: data.serving 
     };
 }
-export const updateHistory = ( state ) => {
+export const updateHistory = ( data ) => {
     return {
         type: "storeGame",
-        games: state.games
+        games: data.games
     };
 }
-
+export const loaded = ( data ) => {
+    return {
+        type: "loaded"
+}; };
 
 // export const saveName = (type, name) => {
 //     return {

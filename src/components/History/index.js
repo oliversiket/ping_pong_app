@@ -1,20 +1,23 @@
 import { connect } from "react-redux";
 import History from "./History"
-import { listGames } from "../../data/actions/api";
+// import { listGames } from "../../data/actions/api";
 
 const mapStateToProps = ( state )=> {
     return {
         games: state.games,
         game_lang: state.lang.game,
-        player_1: state.p1name,
-        player_2: state.p2name,
-        winner_lang: state.lang.winner
+        winner_lang: state.lang.winner,
+        gamesHist_lang: state.lang.displayHistory,
+        gameFinish_lang: state.lang.gameFinished,
+        yes: state.lang.yes,
+        no: state.lang.no,
+        still: state.lang.stillPlay
     };
 };
-const mapDispatchToProps = (dispatch) => {
-    return {
-        handleGames: () => dispatch(listGames()),
-    };
-};
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         handleGames: () => dispatch(listGames()),
+//     };
+// };
   
-export default connect(mapStateToProps, mapDispatchToProps)(History);
+export default connect(mapStateToProps)(History);

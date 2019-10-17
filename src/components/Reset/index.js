@@ -1,11 +1,13 @@
 import { connect } from "react-redux";
 import Reset from "./Reset"
-import { reset } from "../../data/actions/state"
+import { reset, displayHist } from "../../data/actions/state"
+import { listGames } from "../../data/actions/api"
 
 const mapStateToProps = ( state ) => {
     
     return {
-        translate: state.lang.reset,
+        reset: state.lang.reset,
+        history: state.lang.displayHistory
     };
 
 };
@@ -13,6 +15,7 @@ const mapStateToProps = ( state ) => {
 const mapDispatchToProps = dispatch => {
     return{
         handleReset: () => dispatch(reset()),
+        displayHistory: () => dispatch(displayHist())
     };
 }
   

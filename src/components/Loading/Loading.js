@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 
 class Loading extends Component {
-  
+    constructor(props){
+        super(props)
+    }
+    componentDidMount() {
+        if (!this.props.loaded) {
+            this.props.handleLoad();
+        }
+    }
     render() {
 
         const { children, loaded } = this.props;

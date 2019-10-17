@@ -8,17 +8,17 @@ import Player1 from "../Player/Player1";
 import Player2 from "../Player/Player2";
 import Loading from "../Loading";
 
-const App = ( { gameIsOn } ) => (
+const App = ( { display } ) => (
   <React.Fragment>
       {/* header */}
         <Header />
         
         {/* <Loading> */}
-            { !gameIsOn ? <Settings /> : null }
+            { display === "settings" ? <Settings /> : null }
         {/* </Loading> */}
 
         
-        {  gameIsOn ? 
+        {  display === "game" ? 
             // <Loading>
                 <>
                     {/* scores */}
@@ -33,12 +33,17 @@ const App = ( { gameIsOn } ) => (
 
                     { /* reset button */}
                         <Reset />
-                    <hr />
 
-                    {/* { Games output } */}
-                        <History /> 
                 </> : null
             // </Loading> 
+        }
+
+        {/* { Games output } */}
+
+        {   display === "history" ?
+            <Loading >
+                <History />
+            </Loading> : null
         }
 
     </React.Fragment>
